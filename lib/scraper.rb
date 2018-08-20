@@ -32,6 +32,8 @@ class Scraper
       if link.css('img.social-icon').attr('src').value.split('/').last == "rss-icon.png"
         student_hash[:blog] = link.attr('href')
       end
+
+      student_hash[:profile_quote] = students.css('div.profile-quote').value
     end
     student_hash
   end

@@ -22,12 +22,12 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    self.twitter = attributes_hash[:twitter] if attributes_hash[:twitter]
-    self.linkedin = attributes_hash[:linkedin] if attributes_hash[:linkedin]
-    self.github = attributes_hash[:github] if attributes_hash[:github]
-    self.blog = attributes_hash[:blog] if attributes_hash[:blog]
-    self.profile_quote = attributes_hash[:profile_quote] if attributes_hash[:profile_quote]
-    self.bio = attributes_hash[:bio] if attributes_hash[:bio]
+    self.twitter = attributes_hash[:twitter].to_s
+    self.linkedin = attributes_hash[:linkedin].to_s
+    self.github = attributes_hash[:github].to_s
+    self.blog = attributes_hash[:blog].to_s
+    self.profile_quote = attributes_hash[:profile_quote].to_s
+    self.bio = attributes_hash[:bio].to_s
   end
 
   def self.all

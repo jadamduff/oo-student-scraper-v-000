@@ -11,7 +11,7 @@ class Scraper
     students.each do |student|
       puts "#{student.css('a h4.student-name').text}"
     end
-    
+
   end
 
   def self.scrape_profile_page(profile_url)

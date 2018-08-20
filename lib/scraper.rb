@@ -21,8 +21,8 @@ class Scraper
   def test
     Scraper.scrape_index_page('fixtures/student-site/index.html')
   end
+  binding.pry
 
 end
 
 test
-

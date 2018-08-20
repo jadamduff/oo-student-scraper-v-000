@@ -17,7 +17,7 @@ class Student
   def self.create_from_collection(students_array)
     students_array.each do |student|
       new_s = Student.new(student)
-      new_s.add_student_attributes(Scraper.scrape_profile_page('./fixtures/student-site/' + new_s.profile_url))
+      new_s.add_student_attributes(Scraper.scrape_profile_page('./fixtures/student-site/' + new_s.profile_url.to_s))
     end
   end
 

@@ -33,6 +33,7 @@ class Scraper
         student_hash[:blog] = link.attr('href').value
       end
     end
+    student_hash
   end
   binding.pry
 

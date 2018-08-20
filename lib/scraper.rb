@@ -12,6 +12,7 @@ class Scraper
       hash = {:name => student.css('a h4.student-name').text, :location => student.css('a p.student-location').text, :profile_url => student.css('a').attr('href')}
       students_arr << hash
     end
+    students_arr
   end
 
   def self.scrape_profile_page(profile_url)

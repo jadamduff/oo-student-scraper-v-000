@@ -1,4 +1,5 @@
 require 'pry'
+require 'scraper.rb'
 
 class Student
 

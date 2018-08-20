@@ -8,15 +8,15 @@ class Student
   @@all = []
 
   def initialize(student_hash)
+    @name = student_hash[:name]
+    @location = student_hash[:location]
+    @profile_url = student_hash[:profile_url]
     @@all << self
   end
 
   def self.create_from_collection(students_array)
     students_array.each do |student|
       new_s = Student.new(student)
-      new_s.name = student[:name]
-      new_s.location = student[:location]
-      new_s.profile_url = student[:profile_url]
       new_s.add_student_attributes(Scraper.scrape_profile_page('./fixtures/student-site/' + new_s.profile_url))
     end
   end

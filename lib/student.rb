@@ -16,6 +16,7 @@ class Student
       new_s = Student.new(student)
       new_s.add_student_attributes(Scraper.scrape_profile_page(new_s.profile_url))
     end
+    new_s
   end
 
   def add_student_attributes(attributes_hash)

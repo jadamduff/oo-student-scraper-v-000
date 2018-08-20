@@ -18,11 +18,11 @@ class Scraper
 
   end
 
-
+  def test
+    Scraper.scrape_index_page('fixtures/student-site/index.html')
+  end
 
 end
 
-def test
-  Scraper.scrape_index_page('fixtures/student-site/index.html')
-  binding.pry
-end
+test
+
